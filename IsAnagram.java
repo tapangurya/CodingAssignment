@@ -11,15 +11,14 @@ public class IsAnagram {
        else{
             char[] str1Array = str1.toCharArray();
             char[] str2Array = str2.toCharArray();
+            //Arrays.sort(str1Array);   //if i use this method then we don't need to create a sortArray method only i need to check boath String are equal or not 
+            //Arrays.sort(str2Array);  // str1Array.equals(str2Array) if both String are equals then return true or else return false 
+           
             str1Array=sortArray(str1Array);
-            str2Array=sortArray(str2Array);    
-            
-            //Arrays.sort(str1Array); //if we use this method then we don't need to create a sortArray method
-            //Arrays.sort(str2Array);
+            str2Array=sortArray(str2Array);  
             for (int i = 0; i < str1Array.length; i++) {
                 if (str1Array[i] != str2Array[i]) {
                     return false;
-                    
                 }
             }
             return true;
